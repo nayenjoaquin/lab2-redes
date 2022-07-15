@@ -1,0 +1,9 @@
+autopep8==1.6.0
+cffi==1.15.1
+colorama==0.4.5
+cryptography==37.0.4
+pyaes==1.6.1
+pycodestyle==2.8.0
+pycparser==2.21
+toml==0.10.2
+tqdm==4.64.0

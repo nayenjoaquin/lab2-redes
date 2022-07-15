@@ -31,7 +31,7 @@ class RUDPServer:
             sys.exit(1)
 
     def receive(self):
-        message, address = self.__socket.recvfrom(1024)
+        message, address = self.__socket.recvfrom(8192)
         datagram = pickle.loads(message)
 
         self.__last_seqno = datagram.sequence_no
@@ -106,7 +106,7 @@ class RUDPClient:
                     if event.wait(timeout=0.05):
                         break
 
-                    message = self.socket.recv(1024)
+                    message = self.socket.recv(8192)
                     response = pickle.loads(message)
                 except BlockingIOError:
                     continue
