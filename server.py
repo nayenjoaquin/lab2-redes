@@ -19,8 +19,6 @@ def send_file(file_name, server, address):
             msg_aux, add_aux = server.receive()
             server.reply(address, data)
 
-    os._exit(1)
-
 
 def app(server, address):
 
